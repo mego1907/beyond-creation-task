@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Diodrum Arabic Medium";
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
+}
+
+.header {
+  background-image: url(./assets/header.png);
+  background-size: cover;
+  background-repeat: repeat;
+  height: 1330px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 1200px;
+  }
+}
+
+.swiper {
+  width: 568px;
+  height: 735px;
+}
+
+.swiper-slide img {
+  width: 568px;
+  height: 688px;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper {
+    width: 300px;
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    width: 300px;
+    height: 100%;
+  }
+}
+
+.serv-border-bottom {
+  @apply before:h-[1px] before:w-5/6 before:absolute before:left-1/2 before:bottom-0 before:-translate-x-1/2
+}
+
+.serv-border-bottom::before {
+  background-image: url("./assets/border-bottom.svg");
+}
+
+.serv-border-left {
+  @apply md:after:w-[1px] after:h-full after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2
+}
+
+.serv-border-left::after {
+  background-image: url("./assets/border-left.svg");
+}
